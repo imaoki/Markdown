@@ -1,6 +1,6 @@
 # Markdown
 
-[Markdig](https://github.com/xoofx/markdig)のラッパー。
+[Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
 
 ## 依存リポジトリ
 

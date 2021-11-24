@@ -1,6 +1,6 @@
 /*! © 2021 imaoki | MIT License | https://github.com/imaoki */
 /*-
-[Markdig](https://github.com/xoofx/markdig)のラッパー。
+[Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
 */
 struct MarkdownStruct (
   /*- @prop <BooleanClass> 定義リストを使用する場合は`true`、使用しない場合は`false`。既定値は`true`。 */
