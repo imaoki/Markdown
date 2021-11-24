@@ -2,7 +2,7 @@
 
 [Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
 
-## 依存リポジトリ
+## 要件
 
 * [imaoki/Standard](https://github.com/imaoki/Standard)
 
@@ -25,3 +25,7 @@
 "<p>foo<br />
 bar</p>"
 ```
+
+## ライセンス
+
+[MIT License](https://github.com/imaoki/Markdown/blob/main/LICENSE)
