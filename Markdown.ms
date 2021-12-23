@@ -1,4 +1,6 @@
 /*! © 2021 imaoki | MIT License | https://github.com/imaoki */
+/*- @var <Struct:MarkdownStruct> */
+global markdown
 /*-
 [Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
 */
