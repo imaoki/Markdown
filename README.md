@@ -6,6 +6,10 @@
 
 * [imaoki/Standard](https://github.com/imaoki/Standard)
 
+## 動作確認
+
+`3ds Max 2022.3 Update`
+
 ## スタートアップに登録する
 
 `register.ms`を実行する。
