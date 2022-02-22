@@ -127,3 +127,6 @@ struct MarkdownStruct (
     this.initialize()
   )
 )
+::markdown = ::MarkdownStruct()
+format "[define]::markdown\n"
+::MarkdownStruct
