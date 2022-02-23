@@ -22,8 +22,7 @@
 
 ```maxscript
 (
-  local markdown = ::MarkdownStruct()
-  markdown.ToHtml "foo\nbar"
+  ::markdown.ToHtml "foo\nbar"
 )
 -- 結果
 "<p>foo<br />
