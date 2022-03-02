@@ -49,7 +49,7 @@ struct MarkdownStruct (
   */
   public fn ToHtml input = (
     -- input = this.escapeErrorPunctuation input
-    ::stringUtility.TrimEnd (
+    ::std.StringUtility.TrimEnd (
       this.markdownClass.ToHtml input this.pipeline this.context
     ) "\n"
   ),
@@ -123,7 +123,7 @@ struct MarkdownStruct (
   ),
 
   on Create do (
-    this.pathUtility = ::PathUtilityStruct (getSourceFileName())
+    this.pathUtility = ::std.PathUtilityStruct (getSourceFileName())
     this.initialize()
   )
 )
