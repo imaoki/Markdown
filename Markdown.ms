@@ -31,12 +31,28 @@ struct MarkdownStruct (
   -- private markdigDll = @".\Markdig\bin\Release\netstandard2.1\Markdig.dll",
 
   /*
+  public fn Install = (),
   public fn ShowTypes = (),
   public fn ToHtml input = (),
+  public fn Uninstall = (),
 
   -- private fn escapeErrorPunctuation input = (),
   private fn initialize = (),
   */
+
+  /*-
+  インストールする。
+  @returns <OkClass>
+  @remarks 静的メソッド。
+  */
+  public fn Install = (
+    ::MarkdownStruct()
+    if isProperty ::startupLoader "RegisterFile" do (
+      ::startupLoader.RegisterFile (getSourceFileName()) installer:true
+    )
+    format "[install]::markdown\n"
+    ok
+  ),
 
   /*-
   アセンブリで定義されている全ての型をリスナーに出力する。
@@ -60,6 +76,20 @@ struct MarkdownStruct (
     ::std.StringUtility.TrimEnd (
       this.markdownClass.ToHtml input this.pipeline this.context
     ) "\n"
+  ),
+
+  /*-
+  アンインストールする。
+  @returns <OkClass>
+  @remarks 静的メソッド。
+  */
+  public fn Uninstall = (
+    if isProperty ::startupLoader "UnregisterFile" do (
+      ::startupLoader.UnregisterFile (getSourceFileName())
+    )
+    ::markdown = undefined
+    format "[uninstall]::markdown\n"
+    ok
   ),
 
   /*-
@@ -111,6 +141,9 @@ struct MarkdownStruct (
   */
   public fn Dump indent:"" out:listener = (
     format "%MarkdownStruct\n" indent to:out
+    format "%  UseDefinitionLists:%\n" indent this.UseDefinitionLists to:out
+    format "%  UsePipeTables:%\n" indent this.UsePipeTables to:out
+    format "%  UseSoftlineBreakAsHardlineBreak:%\n" indent this.UseSoftlineBreakAsHardlineBreak to:out
     ok
   ),
 
@@ -131,10 +164,8 @@ struct MarkdownStruct (
   ),
 
   on Create do (
+    ::markdown = this
     this.pathUtility = ::std.PathUtilityStruct (getSourceFileName())
     this.initialize()
   )
 )
-::markdown = ::MarkdownStruct()
-format "[define]::markdown\n"
-::MarkdownStruct

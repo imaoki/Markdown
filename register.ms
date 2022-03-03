@@ -1,9 +1,5 @@
 /*! © 2021 imaoki | MIT License | https://github.com/imaoki */
 (
-  fileIn "Markdown.ms"
-
-  if isProperty ::startupLoader "RegisterFile" do (
-    ::startupLoader.RegisterFile (getSourceFileName())
-  )
+  (fileIn "Markdown.ms").Install()
   ok
 )
