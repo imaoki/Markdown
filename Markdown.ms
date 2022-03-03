@@ -30,6 +30,14 @@ struct MarkdownStruct (
   -- private markdigDll = @".\Markdig\bin\Release\netstandard2.0\Markdig.dll",
   -- private markdigDll = @".\Markdig\bin\Release\netstandard2.1\Markdig.dll",
 
+  /*
+  public fn ShowTypes = (),
+  public fn ToHtml input = (),
+
+  -- private fn escapeErrorPunctuation input = (),
+  private fn initialize = (),
+  */
+
   /*-
   アセンブリで定義されている全ての型をリスナーに出力する。
   @returns <OkClass>
