@@ -47,7 +47,7 @@ struct MarkdownStruct (
   */
   public fn Install = (
     ::MarkdownStruct()
-    if isProperty ::startupLoader "RegisterFile" do (
+    if isProperty ::startupLoader #RegisterFile do (
       ::startupLoader.RegisterFile (getSourceFileName()) installer:true
     )
     format "[install]::markdown\n"
@@ -84,7 +84,7 @@ struct MarkdownStruct (
   @remarks 静的メソッド。
   */
   public fn Uninstall = (
-    if isProperty ::startupLoader "UnregisterFile" do (
+    if isProperty ::startupLoader #UnregisterFile do (
       ::startupLoader.UnregisterFile (getSourceFileName())
     )
     ::markdown = undefined
