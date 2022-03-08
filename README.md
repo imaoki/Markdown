@@ -28,7 +28,7 @@
 
 02. `Distribution\Markdown.min.ms`を実行する。
 
-    `Markdig.dll`は`Markdown.min.ms`と同じディレクトリに配置する。
+    `Distribution\Markdig`ディレクトリは`Markdown.min.ms`と同じディレクトリに配置する。
 
 ### アンインストール
 
