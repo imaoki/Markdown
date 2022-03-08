@@ -1,7 +1,7 @@
 /*! © 2022 imaoki | MIT License | https://github.com/imaoki */
 (
-  if isProperty ::markdown #Uninstall do (
-    ::markdown.Uninstall()
+  if isProperty ::MarkdownStruct #Uninstall do (
+    ::MarkdownStruct.Uninstall()
   )
   ok
 )

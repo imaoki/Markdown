@@ -1,6 +1,4 @@
 /*! © 2022 imaoki | MIT License | https://github.com/imaoki */
-/*- @var <Struct:MarkdownStruct> */
-global markdown
 /*-
 [Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
 */
@@ -46,11 +44,10 @@ struct MarkdownStruct (
   @remarks 静的メソッド。
   */
   public fn Install = (
-    ::MarkdownStruct()
     if isProperty ::startupLoader #RegisterFile do (
       ::startupLoader.RegisterFile (getSourceFileName()) installer:true
     )
-    format "[install]::markdown\n"
+    format "[install]::MarkdownStruct\n"
     ok
   ),
 
@@ -87,8 +84,7 @@ struct MarkdownStruct (
     if isProperty ::startupLoader #UnregisterFile do (
       ::startupLoader.UnregisterFile (getSourceFileName())
     )
-    ::markdown = undefined
-    format "[uninstall]::markdown\n"
+    format "[uninstall]::MarkdownStruct\n"
     ok
   ),
 
@@ -164,7 +160,6 @@ struct MarkdownStruct (
   ),
 
   on Create do (
-    ::markdown = this
     this.pathUtility = ::std.PathUtilityStruct (getSourceFileName())
     this.initialize()
   )
