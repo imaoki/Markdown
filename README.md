@@ -1,52 +1,68 @@
 # Markdown
 
-[Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
+[Markdig](https://github.com/xoofx/markdig) wrapper.
+<!-- [Markdig](https://github.com/xoofx/markdig)のラッパー。 -->
 
-## 要件
+## Requirements
+<!-- 要件 -->
 
 * [imaoki/Standard](https://github.com/imaoki/Standard)
 
-## 動作確認
+## Development Environment
+<!-- 開発環境 -->
 
 `3ds Max 2022.3 Update`
 
-## インストール
+## Install
+<!-- インストールする -->
 
-01. 依存スクリプトがある場合は予めインストールしておく。
+01. Dependent scripts should be installed beforehand.
+    <!-- 依存スクリプトは予めインストールしておく。 -->
 
-02. `install.ms`を実行する。
+02. Execute `install.ms`.
+    <!-- `install.ms`を実行する。 -->
 
-## アンインストール
+## Uninstall
+<!-- アンインストールする -->
 
-`uninstall.ms`を実行する。
+Execute `uninstall.ms`.
+<!-- `uninstall.ms`を実行する。 -->
 
-## スタンドアローン版
+## Standalone version
+<!-- スタンドアローン版 -->
 
-### インストール
+### Install
+<!-- インストールする -->
 
-01. 依存スクリプトがある場合は予めインストールしておく。
+01. Dependent scripts should be installed beforehand.
+    <!-- 依存スクリプトは予めインストールしておく。 -->
 
-02. `Distribution\Markdown.min.ms`を実行する。
+02. Execute `Distribution\Markdown.min.ms`.
+    <!-- `Distribution\Markdown.min.ms`を実行する。 -->
 
-    `Distribution\Markdig`ディレクトリは`Markdown.min.ms`と同じディレクトリに配置する。
+    Place the `Distribution\Markdig` directory in the same directory as `Markdown.min.ms`.
+    <!-- `Distribution\Markdig`ディレクトリは`Markdown.min.ms`と同じディレクトリに配置する。 -->
 
-### アンインストール
+### Uninstall
+<!-- アンインストールする -->
 
 ```maxscript
 ::markdown.Uninstall()
 ```
 
-## 使い方
+## Usage
+<!-- 使い方 -->
 
 ```maxscript
 (
   ::markdown.ToHtml "foo\nbar"
 )
--- 結果
+-- result
 "<p>foo<br />
 bar</p>"
 ```
 
-## ライセンス
+## License
+<!-- ライセンス -->
 
 [MIT License](https://github.com/imaoki/Markdown/blob/main/LICENSE)
