@@ -1,5 +1,8 @@
 # Markdown
 
+<!-- [![GitHub release (latest by date)](https://img.shields.io/github/v/release/imaoki/Markdown)](https://github.com/imaoki/Markdown/releases/latest) -->
+[![GitHub](https://img.shields.io/github/license/imaoki/Markdown)](https://github.com/imaoki/Markdown/blob/main/LICENSE)
+
 [Markdig](https://github.com/xoofx/markdig) wrapper.
 <!-- [Markdig](https://github.com/xoofx/markdig)のラッパー。 -->
 
