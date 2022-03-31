@@ -1,4 +1,23 @@
 /*! © 2022 imaoki | MIT License | https://github.com/imaoki */
+(
+  local hasMetRequirements
+  fn hasMetRequirements = (
+    isStruct ::std \
+        and isProperty ::std #StructName \
+        and classOf ::std.StructName == MAXScriptFunction \
+        and ::std.StructName() == #StandardStruct
+  )
+  if not hasMetRequirements() do (
+    local fileClass = DotNetClass "System.IO.File"
+    local pathClass = DotNetClass "System.IO.Path"
+    local currentDir = pathClass.GetDirectoryName (getSourceFileName())
+    local standardFile = currentDir + @"\Standard.min.ms"
+    if fileClass.Exists standardFile do fileIn standardFile
+  )
+  if not hasMetRequirements() do (
+    format "[error]Requirement not met.\n"
+  )
+)
 /*-
 [Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
 */
@@ -128,7 +147,7 @@ struct MarkdownStruct (
   ),
 
   /*- @prop <String> バージョン番号。メジャー、マイナー、パッチの順。 */
-  private version = "1.0.0",
+  private version = "1.1.1",
 
   /*- @returns <Name> */
   public fn StructName = #MarkdownStruct,
