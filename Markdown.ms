@@ -20,6 +20,7 @@
 )
 /*-
 [Markdig 0.26.0](https://github.com/xoofx/markdig)のラッパー。
+@remarks フレームワークは`net452`を使用する。
 */
 struct MarkdownStruct (
   /*- @prop <BooleanClass> 定義リストを使用する場合は`true`、使用しない場合は`false`。既定値は`true`。 */
@@ -41,11 +42,7 @@ struct MarkdownStruct (
   private pipeline,
 
   /*- @prop <String> アセンブリのパス文字列。 */
-  private markdigDll = @".\Markdown.Markdig\bin\Release\net452\Markdig.dll",
-  -- private markdigDll = @".\Markdown.Markdig\bin\Release\netcoreapp2.1\Markdig.dll",
-  -- private markdigDll = @".\Markdown.Markdig\bin\Release\netcoreapp3.1\Markdig.dll",
-  -- private markdigDll = @".\Markdown.Markdig\bin\Release\netstandard2.0\Markdig.dll",
-  -- private markdigDll = @".\Markdown.Markdig\bin\Release\netstandard2.1\Markdig.dll",
+  private markdigDll = @".\Markdown.Markdig\Markdig.dll",
 
   /*
   public fn Install = (),
@@ -147,7 +144,7 @@ struct MarkdownStruct (
   ),
 
   /*- @prop <String> バージョン番号。メジャー、マイナー、パッチの順。 */
-  private version = "1.1.2",
+  private version = "1.1.3",
 
   /*- @returns <Name> */
   public fn StructName = #MarkdownStruct,
