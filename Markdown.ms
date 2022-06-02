@@ -143,8 +143,8 @@ struct MarkdownStruct (
     ok
   ),
 
-  /*- @prop <String> バージョン番号。メジャー、マイナー、パッチの順。 */
-  private version = "1.1.3",
+  /*- @prop <Array[<Integer>]> バージョン番号。メジャー、マイナー、パッチの順。 */
+  private version = #(1, 1, 3),
 
   /*- @returns <Name> */
   public fn StructName = #MarkdownStruct,
@@ -179,7 +179,7 @@ struct MarkdownStruct (
   ),
 
   /*-
-  @returns <String>
+  @returns <Array[<Integer>]>
   */
   public fn GetVersion = (
     this.version
