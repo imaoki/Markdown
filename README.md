@@ -64,7 +64,7 @@
 (
   ::markdown.ToHtml "foo\nbar"
 )
--- result
+-- 結果
 "<p>foo<br />
 bar</p>"
 ```
